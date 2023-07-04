@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(/images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+nav{
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+
+    width: 150px; /* this will adjust the size of logo image */
+
+}
+
+.menu-links{
+
+    flex: 1; /* so it will occupy full space the row */
+    text-align: right;
+}
+
+/* .menu-links ul{
+
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.menu-links ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 15px;
+    /* position: relative; */
+}
+
+.menu-links ul li a{
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+}
+
+.menu-links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+/* NOTE :- ABOVE STYLING ON LI AFETER WILL CREATE A UNDERLINE BUT INITIALY ITS WIDTH WILL BE 0PX  */
+
+.menu-links ul li:hover::after{
+    width: 100%; 
+}
+
+.text-box{
+
+    width: 90%;
+    color: #fff;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+
+    /* NOTE :- STYLE ALSO WORKS SAME BUT NOT GIVING EXPECTED OUTPUT */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    text-transform: capitalize;
+
+}
+
+.text-box h1{
+    font-size: 62px;
+    font-weight: 600;
+}
+
+.text-box p{
+    margin: 12px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 12px 34px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.8s;
+}
+
+.hero-btn::before, .hero-btn::after{
+    content: "";
+    background: #fff;
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.hero-btn::before{
+    right: 100%;
+}
+
+.hero-btn::after{
+    left: 100%;
+}
+
+.hero-btn:hover{
+    background-color: #f44336;
+}
+
+.hero-btn:hover:before, .hero-btn:hover::after{
+    width: 15%;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width:700px){
+
+    .text-box h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .menu-links{
+        position: absolute;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        width: 200px;
+        height: 100vh;
+        background-color: #f44336;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    .menu-links ul{
+        padding: 30px;
+    }
+    
+    .menu-links ul li{
+        display: block;
+    }
+
+    nav .fa{
+
+        display: inline-block;
+        color: #fff;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+}
+
