@@ -4,14 +4,21 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+body{
+    overflow-x: hidden;
+}
+
+/* HEADER SECTION START */
 
 .header{
 
     min-height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(../images/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.7)) ,url(../images/banner.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -149,7 +156,158 @@ nav .fa{
     display: none;
 }
 
+
+/* HEADER SECTION END */
+
+
+/* CLASS SECTION START */
+.course{
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.h1title{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.desc{
+    color: #777;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    line-height: 22px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.course-col{
+
+    flex-basis: 31%;
+    background: rgba(249, 220, 196,0.5);
+    border-radius: 10px;
+    padding: 20px 12px;
+    margin-bottom: 5%;
+    transition: all 0.4s ease-in-out;
+}
+
+.h3title{
+
+    font-size: larger;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0px 0px 20px 0px rgba(4,9,30,0.3);
+}
+
+/* CLASS SECTION END */
+
+
+/* CAMPUS SECTION START */
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.campus-col .layer{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.campus-col .layer:hover{
+    background-color: rgba(255,0,0,.6);
+}
+
+.campus-col .layer .h3title{
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-size: 25px;
+    transition: all 0.4s ease-in-out;
+}
+
+.campus-col:hover .h3title{
+    bottom: 50%;
+    translate: 0px 50%;
+    opacity: 1;
+}
+
+/* CAMPUS SECTION END */
+
+/* FACILITIES SECTION START */
+
+.facility{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facility-col{
+    flex-basis: 31%;
+    border-radius: 15px;
+    margin-bottom: 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-col img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.facility-col .desc{
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.facility-col .h3title{
+    margin: 16px 0px 14px 0px;
+    padding: 0px 5px;
+    text-align: left;
+}
+
+
 @media(max-width:700px){
+
+    /* HEADER SECTION MEDIA QUERIY */
 
     .text-box h1{
         font-size: 20px;
@@ -182,6 +340,12 @@ nav .fa{
         color: #fff;
         font-size: 25px;
         margin: 10px;
+    }
+
+    /* COURSE SECTION MEDIA */
+
+    .row{
+        flex-direction: column;
     }
 
 }
